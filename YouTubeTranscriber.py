@@ -4,7 +4,7 @@ from TextParaphraser import TextParaphraser
 class YouTubeTranscriber:
     def __init__(self, language=['ru']) -> None:
         self.__language = language
-        __max_lenght = 30000
+        self.__max_lenght = 30000
 
     def __extract_id_from_url(self, url):
         if "=" in url:
@@ -46,5 +46,5 @@ class YouTubeTranscriber:
 
     
 a = YouTubeTranscriber()
-result = a.paraphrase_sentences("https://www.youtube.com/watch?v=3mR9YrPEru4")
+result = a.paraphrase_sentences("https://www.youtube.com/watch?v=kwS7HupJhYo")
 print(result)
