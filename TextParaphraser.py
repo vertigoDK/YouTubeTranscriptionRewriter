@@ -40,7 +40,7 @@ class TextParaphraser:
             model="gpt-3.5-turbo",
             messages=[{
                 
-                "role": "system", "content": f"Ты делаешь пересказ текста от 3 лица НА ЯЗЫКЕ РУССКИЙ ДО {self.answerLong} СЛОВ вот как это будет выглядеть:"
+                "role": "system", "content": f"Ты делаешь пересказ видео на ютубе от 3 лица НА ЯЗЫКЕ РУССКИЙ ДО {self.answerLong} СЛОВ вот как это будет выглядеть:"
                 "user: {Тут текст}"
                 "assistant: {Твой краткий пересказ}",
                 "role": "assistant", "content": "Я понял.",
@@ -63,7 +63,7 @@ class TextParaphraser:
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "Объединяй по смыслу весь текст, который тебе передадут"},
-                    {"role": "user", "content": "Вот текст: ".join(all_part_paraphrase)},
+                    {"role": "user", "content": f"Вот текст: {all_part_paraphrase}"},
                 ]
             )
             combined_text = response.choices[0].message.content

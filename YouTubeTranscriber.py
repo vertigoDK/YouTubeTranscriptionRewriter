@@ -46,5 +46,5 @@ class YouTubeTranscriber:
 
     
 a = YouTubeTranscriber()
-result = a.paraphrase_sentences("https://www.youtube.com/watch?v=kwS7HupJhYo")
+result = a.paraphrase_sentences("https://www.youtube.com/watch?v=Bqgj6gSeUk0")
 print(result)
