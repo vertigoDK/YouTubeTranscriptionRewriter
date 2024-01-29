@@ -2,9 +2,9 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from SentenceDivider import SentenceDivider
 from TextParaphraser import TextParaphraser
 class YouTubeTranscriber:
-
     def __init__(self, language=['ru']) -> None:
         self.__language = language
+        __max_lenght = 30000
 
     def __extract_id_from_url(self, url):
         if "=" in url:
@@ -19,7 +19,7 @@ class YouTubeTranscriber:
                 languages=self.__language)
             text_combined = ' '.join(item.get('text', '') for item in srt)
             print(len(f"Длина видео {text_combined}"))
-            if len(text_combined) > 30000:
+            if len(text_combined) > self.__max_lenght:
                 print('Слишком много слов в видео')
                 return None
             return text_combined
