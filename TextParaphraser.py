@@ -9,8 +9,6 @@ class TextParaphraser:
     def __init__(self) -> None:
         self.__OPENAI_API = os.getenv('API_KEY')
 
-        
-
     @property
     def answerLong(cls):
         return cls.__answerLong
